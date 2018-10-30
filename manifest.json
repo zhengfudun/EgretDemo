@@ -17,6 +17,7 @@
 		"bin-debug/Mine/DepthManagement.js",
 		"bin-debug/Mine/Graphics.js",
 		"bin-debug/Mine/MaskAndCollider.js",
+		"bin-debug/Mine/MixedMode.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Mine/MyText.js",
 		"bin-debug/Mine/MyTimer.js",

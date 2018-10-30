@@ -173,7 +173,8 @@ var Main = (function (_super) {
         //this.addChild(new MyTimer());//计时器
         //this.addChild(new MyEventData());//自定义事件测试
         //this.addChild(new DepthManagement());//显示深度管理
-        this.addChild(new MaskAndCollider()); //遮罩与碰撞
+        //this.addChild(new MaskAndCollider());//遮罩与碰撞
+        this.addChild(new MixedMode()); //混合模式
     };
     return Main;
 }(eui.UILayer));

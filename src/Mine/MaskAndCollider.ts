@@ -68,5 +68,6 @@ class MaskAndCollider extends egret.DisplayObjectContainer{
 		txt2.y=600;
 		txt2.text=""+rect1.intersects(rect2);
 		this.addChild(txt2);
+		
     }
 }

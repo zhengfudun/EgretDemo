@@ -37,6 +37,7 @@ var MaskAndCollider = (function (_super) {
         this.addChild(shp2);
         var rect = new egret.Rectangle(20, 20, 60, 60);
         shp2.mask = rect;
+        //物品一碰撞检测
         var txt = new egret.TextField();
         txt.width = 640;
         txt.textColor = 0x000000;
@@ -52,6 +53,26 @@ var MaskAndCollider = (function (_super) {
                 txt.text = "没碰上";
             }
         }, this);
+        //碰撞盒检测
+        var shp3 = new egret.Shape();
+        shp3.graphics.beginFill(0xff0000);
+        shp3.graphics.drawRect(0, 250, 50, 50);
+        shp3.graphics.endFill();
+        this.addChild(shp3);
+        var shp4 = new egret.Shape();
+        shp4.graphics.beginFill(0x00ff00);
+        shp4.graphics.drawRect(25, 275, 50, 50);
+        shp4.graphics.endFill();
+        this.addChild(shp4);
+        var rect1 = new egret.Rectangle(shp3.x, shp3.y, shp3.width, shp3.height);
+        var rect2 = new egret.Rectangle(shp4.x, shp4.y, shp4.width, shp4.height);
+        var txt2 = new egret.TextField();
+        txt2.width = 640;
+        txt2.textColor = 0x000000;
+        txt2.textAlign = egret.HorizontalAlign.CENTER;
+        txt2.y = 600;
+        txt2.text = "" + rect1.intersects(rect2);
+        this.addChild(txt2);
     };
     return MaskAndCollider;
 }(egret.DisplayObjectContainer));
